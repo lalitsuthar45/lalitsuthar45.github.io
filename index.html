@@ -1,322 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="UajuMoCH2t-doXRkYyf8cB4LGqx7Td-hb4kyyEABtn4" />
-    <title>Lalit suthar-web devloper & editor</title>
-    <meta name="description" content="welcome to lalit suthar's official portfolio. web devloper,editor & student at sp college, Rajasthan.">
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link rel="icon" type="image/png" href="favicon.png"/>
-    <link href="./lalit- devloper portfolio_files/css2" rel="stylesheet">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lalit Suthar - Web Developer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        background-color: black;
-        color: rgb(206, 11, 170);
-        font-family: "poppins", sans-serif;
-      
-        size: 6px;
-      }
+    body {
+      background-color: black;
+      color: rgb(206, 11, 170);
+      font-family: "Poppins", sans-serif;
+    }
 
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgb(5, 5, 51);
+      flex-wrap: wrap;
+    }
 
-      @media (max-width: 600px) {
-  .help-container {
-    padding: 16px 8px;
-    max-width: 100%;
-    margin: 20px 5px;
-  }
-  h1 {
-    font-size: 1.4em;
-  }
-  .back-btn {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
-}
+    .left {
+      font-size: 1.5rem;
+    }
 
-      nav {
-        display: flex;
-        justify-content: space-around;
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: #07f2ea;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      color: rgb(248, 167, 5)
+    }
+
+    .firstsection {
+      display: flex;
+      justify-content: center;
         align-items: center;
-        height: 60px;
-        background-color: rgb(5, 5, 51);
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+    }
+
+    .leftsection {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      margin: 10px;
+      color: white;
+      background-color: #1e2167;
+      border: 2px solid white;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .rightsection {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .rightsection img {
+      width: 100%;
+      max-width: 300px;
+      margin: 0;
+      filter: blur(5px);
+      box-shadow: 4px 4px 75px rgb(150, 156, 157);
+    }
+
+    main hr {
+      border: none;
+      height: 1px;
+      background-color: #712a4d;
+      margin: 40px 0;
+    }
+
+    .secondsection {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .secondsection h1 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .vertical {
+      background: rgb(25, 22, 27);
+      padding: 20px;
+      max-width: 250px;
+      color: white;
+      border-radius: 10px;
+    }
+
+    .image-top {
+      width: 40px;
+    }
+
+    .vertical-title {
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .vertical-desc {
+      font-size: 0.9rem;
+      color: rgb(117, 13, 237);
+    }
+
+    /* 🔥 Responsive for Small Devices */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
       }
+
       nav ul {
-        display: flex;
-        justify-content: center;
+        flex-direction: column;
+        width: 100%;
       }
-      nav ul li {
-        list-style: none;
-        margin: 0 23px;
-      }
-      nav ul li a {
-        text-decoration: none;
-        margin: 0 23px;
-      }
-      nav ul li a:hover {
-        color: rgb(18, 219, 68);
-        font-size: 1.02rem;
-      }
-      .left {
-        font-size: 1.5rem;
-      }
+
       .firstsection {
-        display: flex;
-        justify-content: space-around;
-        margin: 93px;
-      
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
-      .firstsection > div {
-        width: 30%;
-      }
+
       .leftsection {
-        font-size: 2.6rem;
-        margin: 50px;
-      }
-      
-      
-        .leftsection .btn{
-        padding: 12px;
-        color: white;
-        background-color: #1e2167;
-        border: 2px solod white;
-        border-radius: 6px;
-        font-size: 14px;
-        cursor: pointer;
-       
-        
-      }
-     
-    
-      .rightsection img {
-        width: 110%;
-        margin: 30px 0;
-        filter: blur(10px);
-        box-shadow: 4px 4px 75px rgb(150, 156, 157);
-      }
-      .rightsection:hover{
-        size: 20px;
-      }
-      main hr {
-        border: 0;
-        background-color: #712a4d;
-        height: 1.2px;
-        margin: 40px 80px;
-      }
-      .text-gray {
-        color: rgb(163, 188, 186);
-      }
-    
-      .purple {
-        color: rgb(5, 68, 205);
-      }
-      #element {
-        color: rgb(5, 68, 205);
-      }
-      .secondsection {
-        height: 80vh;
-        max-width: 85vw;
-        margin: auto;
-      }
-      .secondsection h1 {
         font-size: 1.6rem;
       }
-      .secondsection .box {
-        background: rgb(25, 22, 27);
-        width: 89vw;
-        height: 200px;
-        margin: 36px 0;
-        display: flex;
-      }
-    
-      .secondsection .vertical {
-        height: 93px;
-        width: 1px;
-        background-color: rgb(106, 113, 122);
-        margin: 0 118px;
-      }
-      .image-top {
-        width: 30px;
-        position: relative;
-        top: -32px;
-        left: -15px;
-      }
-    
-      .vertical-title {
-        position: relative;
-        top: 75px;
-        width: 190px;
-      }
-      .vertical-desc {
-        position: relative;
-        top: 86px;
-        color: rgb(117, 13, 237);
-        width: 150px;
-        font-size: 14px;
-      }
-    
-      .right a {
-        color: #07f2ea;
-      }
-      .right :hover{
-        size: 20%;
-        color: #f4f80a;
+
+      .rightsection img {
+        max-width: 90%;
       }
 
-   
-</style>
+      .btn {
+        width: 100%;
+        max-width: 200px;
+      }
 
- </head>
-  <body>
+      .box {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
   <header>
     <nav>
-      <div class="left">lalit's portfolio</div>
-      <div class="right">
-        <ul>
-          <li>
-            <a href="https://www.google.com/">Home</a>
-          </li>
-          <li>
-            <a href="https://www.google.com/">About</a>
-          </li>
-          <li>
-            <a href="https://www.google.com/">Skills</a>
-          </li>
-          <li>
-            <a href="https://www.google.com/">Services</a>
-          </li>
-          <li>
-            <a href="https://www.google.com/">Contact me</a>
-          </li>
-        </ul>
-      </div>
+      <div class="left">Lalit's Portfolio</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </nav>
   </header>
+
   <main>
     <section class="firstsection">
       <div class="leftsection">
-        "Hello, iam"
-        <span class="purple">lalit suthar</span>
-        <div> and i'm a</div>
-        <span id="element">video editor </span>
-        <span class="typed-cursor typed-cursor--blink" area-hidden="true"></span>
+        Hello, I am <span class="purple">Lalit Suthar</span><br>
+        And I'm a <span id="element">Video Editor</span>
         <div class="buttons">
-          <a href="myresume.jpg">
-            <buttons class="btn">Download resume</buttons>
-          </a>
-          <br>
-          <a href="https://github.com/lalitsuthar45">
-            <buttons class="btn">contact me</buttons>
-          </a>
-          
+          <a href="myresume.jpg"><button class="btn">Download Resume</button></a>
+          <a href="https://github.com/lalitsuthar45"><button class="btn">Contact Me</button></a>
         </div>
       </div>
-      
       <div class="rightsection">
-        <img src="myimage.jpg"alt>
+        <img src="myimage.jpg" alt="Profile Image">
       </div>
     </section>
+
     <hr>
+
     <section class="secondsection">
-      <span class="text-gray">what i have done so far</span>
-       <pre>
-       </pre>
       <h1>My Qualification</h1>
       <div class="box">
         <div class="vertical">
           <img class="image-top" src="school1.jpg" alt="">
-          <div class="vertical-title">6th-8th (2013-2016)</div>
-          <div class="vertical-desc">
-            at Aapeshewar vidhya mandir school adawada (Raj)
-          </div>
+          <div class="vertical-title">6th-8th (2013–2016)</div>
+          <div class="vertical-desc">Aapeshewar Vidya Mandir, Adawada (Raj)</div>
         </div>
         <div class="vertical">
           <img class="image-top" src="school1.jpg" alt="">
-          <div class="vertical-title">4th-10th (2016-2022)</div>
-          <div class="vertical-desc">
-            at adarsh public sec. school siyana jalore (Raj)
-          </div>
+          <div class="vertical-title">4th–10th (2016–2022)</div>
+          <div class="vertical-desc">Adarsh Public Sec. School, Siyana (Raj)</div>
         </div>
         <div class="vertical">
           <img class="image-top" src="school1.jpg" alt="">
-          <div class="vertical-title">11th-12th (2022-2024)</div>
-          <div class="vertical-desc">
-            at mahatma gandhi goverment school siyana (Raj)
-          </div>
+          <div class="vertical-title">11th–12th (2022–2024)</div>
+          <div class="vertical-desc">MG Govt. School, Siyana (Raj)</div>
         </div>
-  
         <div class="vertical">
           <img class="image-top" src="photo.jpg" alt="">
-          <div class="vertical-title">BCA 1st (persent)</div>
-          <div class="vertical-desc">at sp collage sirohi (Raj)</div>
+          <div class="vertical-title">BCA 1st (Present)</div>
+          <div class="vertical-desc">SP College, Sirohi (Raj)</div>
         </div>
       </div>
     </section>
+  </main>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js">
-
-    </script>
-    
-    <script>
-         var typed = new Typed("#element",{
-           strings: [
-           "graphic designer",
-           "video editor",
-           "web designer",
-           "aap devloper",
-           ],
-           typespeed: 50,
-      });
-    </script>
-    <style data-typed-js-cursor-css="true">
-      .typed-cursor{
-        opacity: 1;
-      }
-      .typed-cursor.typed-cursor--blinks{
-        animation: typedjsbliks 0.7s  infinite;
-         -webkit-animation:  typedjsbliks 0.7s infinite;
-                 animation:  typedjsbliks 0.7s infinite;
-      
-                }
-                @keyframes typedjsblink{
-                  50% { opacity: 0.0; }
-                }
-      @-webkit-keyframes typedjsblink{
-        0% { opacity: 1; }
-        50% { opacity: 0.0; }
-        100% { opacity: 1; }
-      }
-    </style>
-    <style data-typed-js-cursor-css="true">
-      .typed-cursor{
-        opacity: 1;
-      }
-      .typed-cursor.typed-cursor--blinks{
-        animation: typedjsbliks 0.7s  infinite;
-         -webkit-animation:  typedjsbliks 0.7s infinite;
-                 animation:  typedjsbliks 0.7s infinite;
-      
-                }
-                @keyframes typedjsblink{
-                  50% { opacity: 0.0; }
-                }
-      @-webkit-keyframes typedjsblink{
-        0% { opacity: 1; }
-        50% { opacity: 0.0; }
-        100% { opacity: 1; }
-      }
-    </style>
-</main>
-
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed("#element", {
+      strings: ["Graphic Designer", "Video Editor", "Web Designer", "App Developer"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
+    });
+  </script>
 </body>
 </html>
-
-
-
