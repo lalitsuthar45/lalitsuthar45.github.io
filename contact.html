@@ -26,7 +26,19 @@
         <label for="message">message</label>
         <br><textarea id="message"name="message"rows="5"required></textarea><br><br>
         <button type="submit">send</button>
+         <button type="submit">send</button>
+        <p id="confirmation" style="display: none; color: green;">Message sent successfully!</p>
     </form>
+<script>
+  const form = document.getElementById("contactForm");
+  const confirmation = document.getElementById("confirmation");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // page reload or Chrome open na ho
+    confirmation.style.display = "block";
+    form.reset();
+  });
+</script>
     </div>
 </body>
 </html>
