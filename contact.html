@@ -16,9 +16,9 @@
             <li><a href="contact.html">contact us</a></li>
         </ul></nav>
     
-    <div class="form-container">
+     <div class="form-container">
         <h1>contact us</h1>
-    <form action="contactForm'>
+    <form id="contactForm">
         <label for="name">name</label>
         <br><input type="text"id="name"name="name"required><br><br>
         <label for="email">email</label>
@@ -26,8 +26,9 @@
         <label for="message">message</label>
         <br><textarea id="message"name="message"rows="5"required></textarea><br><br>
         <button type="submit">send</button>
-         <button type="submit">send</button>
         <p id="confirmation" style="display: none; color: green;">Message sent successfully!</p>
+
+
     </form>
 <script>
   const form = document.getElementById("contactForm");
@@ -39,6 +40,7 @@
     form.reset();
   });
 </script>
+
     </div>
 </body>
 </html>
