@@ -1,208 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="UajuMoCH2t-doXRkYyf8cB4LGqx7Td-hb4kyyEABtn4" />
-    
-    <title>Lalit Suthar - Software Engineer | Portfolio</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-        <link rel="icon" type="image" href="favicon.png?v=2">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="UajuMoCH2t-doXRkYyf8cB4LGqx7Td-hb4kyyEABtn4" />
 
-<link rel="canonical" href="https://lalitsuthar45.github.io/" />
+  <title>Lalit Suthar - Software Engineer | Portfolio</title>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    
+  <link rel="icon" type="image" href="favicon.png?v=2">
+  <link rel="canonical" href="https://lalitsuthar45.github.io/">
 </head>
-<body class="bg-gray-900 text-gray-200">
+<body>
 
-   <!-- Header -->
-<header class="sticky top-0 z-50 bg-gray-950/80 backdrop-blur-sm">
-  <nav class="container mx-auto flex flex-col sm:flex-row items-center justify-between p-4 md:px-8 lg:px-16">
-    <div class="flex items-center space-x-3">
-      <!-- Hamburger Icon (Left) -->
-      <button id="menu-btn" class="text-gray-300 hover:text-cyan-400 text-2xl mr-4">
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <!-- Portfolio Text -->
-      <div class="text-2xl font-bold text-cyan-400">
-        Lalit's Portfolio
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="nav-left">
+        <!-- Hamburger -->
+        <button id="menu-btn" class="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="logo">Lalit's Portfolio</div>
       </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div class="sidebar-header">
+      <h2>Suggestions</h2>
+      <button id="close-btn"><i class="fas fa-times"></i></button>
     </div>
-
-    <!-- Nav Links -->
-    <ul class="flex flex-wrap items-center justify-center space-x-2 sm:space-x-4">
-      <li><a href="#home" class="px-3 py-1 border border-transparent rounded-lg hover:border-amber-400 hover:text-amber-400 transition-colors duration-300">Home</a></li>
-      <li><a href="#about" class="px-3 py-1 border border-transparent rounded-lg hover:border-amber-400 hover:text-amber-400 transition-colors duration-300">About</a></li>
-      <li><a href="#skills" class="px-3 py-1 border border-transparent rounded-lg hover:border-amber-400 hover:text-amber-400 transition-colors duration-300">Skills</a></li>
-      <li><a href="#services" class="px-3 py-1 border border-transparent rounded-lg hover:border-amber-400 hover:text-amber-400 transition-colors duration-300">Services</a></li>
+    <ul>
+      <li><a href="#skills">⭐ Check My Skills</a></li>
+      <li><a href="#services">💼 My Services</a></li>
+      <li><a href="contact.html">📩 Contact Me</a></li>
+      <li><a href="meraresume.pdf">📄 Download Resume</a></li>
     </ul>
-  </nav>
-</header>
-
-<!-- Sidebar (Left Side) -->
-<div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-900 shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
-  <div class="p-4 flex justify-between items-center border-b border-gray-700">
-    <h2 class="text-xl font-bold text-cyan-400">Suggestions</h2>
-    <button id="close-btn" class="text-gray-300 hover:text-red-500 text-xl">
-      <i class="fas fa-times"></i>
-    </button>
   </div>
-  <ul class="p-4 space-y-4 text-gray-300">
-    <li><a href="#skills" class="block hover:text-cyan-400">⭐ Check My Skills</a></li>
-    <li><a href="#services" class="block hover:text-cyan-400">💼 My Services</a></li>
-    <li><a href="contact.html" class="block hover:text-cyan-400">📩 Contact Me</a></li>
-    <li><a href="meraresume.pdf" class="block hover:text-cyan-400">📄 Download Resume</a></li>
-  </ul>
-</div>
 
-<!-- Overlay -->
-<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+  <!-- Overlay -->
+  <div id="overlay"></div>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center p-8 md:p-16 text-center md:text-left">
-            <div class="md:w-1/2 lg:w-2/5 mb-8 md:mb-0 md:mr-12">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-                    Hello, I am <span class="text-fuchsia-600">Lalit Suthar</span><br>
-                    And I'm a <span id="element" class="text-cyan-400"></span>
-                </h1>
-                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="meraresume.pdf" download class="btn bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300 shadow-lg">
-                        Download Resume
-                    </a>
-                    <a href="contact.html" class="btn bg-transparent border-2 border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 shadow-lg">
-                        Contact Me
-                    </a>
-                </div>
-            </div>
-            <div class="md:w-1/2 lg:w-2/5 flex justify-center items-center">
-                <img src="myimage.jpg">
-            </div>
-        </section>
+  <!-- Main -->
+  <main>
+    <!-- Hero -->
+    <section id="home">
+      <div class="hero-text">
+        <h1>
+          Hello, I am <span class="highlight">Lalit Suthar</span><br>
+          And I'm a <span id="element" class="typing"></span>
+        </h1>
+        <div class="hero-buttons">
+          <a href="meraresume.pdf" download class="btn primary">Download Resume</a>
+          <a href="contact.html" class="btn secondary">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="myimage.jpg" alt="Profile Picture">
+      </div>
+    </section>
 
-        <hr class="border-t-2 border-fuchsia-800 my-16 mx-auto w-4/5">
+    <hr>
 
-        <!-- Skills section -->
-        <section id="skills" class="py-16 px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-fuchsia-400">My Skills</h2>
-            <div class="flex flex-wrap justify-center gap-8">
-                <!-- Skill Card 1: HTML -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border-2 border-gray-700 w-full sm:w-80 transition-transform transform hover:scale-105">
-                    <div class="flex items-center justify-center mb-4">
-                        <i class="fab fa-html5 text-4xl text-orange-500"></i>
-                    </div>
-                    <div class="text-xl font-bold text-gray-100 mb-2">HTML5</div>
-                    <div class="text-gray-400">
-                        Strong foundation in building structured and semantic web pages.
-                    </div>
-                </div>
-                <!-- Skill Card 2: CSS -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border-2 border-gray-700 w-full sm:w-80 transition-transform transform hover:scale-105">
-                    <div class="flex items-center justify-center mb-4">
-                        <i class="fab fa-css3-alt text-4xl text-blue-500"></i>
-                    </div>
-                    <div class="text-xl font-bold text-gray-100 mb-2">CSS3 & Tailwind CSS</div>
-                    <div class="text-gray-400">
-                        Proficient in styling and creating modern, responsive designs.
-                    </div>
-                </div>
-                <!-- Skill Card 3: C++ -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border-2 border-gray-700 w-full sm:w-80 transition-transform transform hover:scale-105">
-                    <div class="flex items-center justify-center mb-4">
-                        <i class="fas fa-terminal text-4xl text-blue-400"></i>
-                    </div>
-                    <div class="text-xl font-bold text-gray-100 mb-2">C++</div>
-                    <div class="text-gray-400">
-                        Experience with object-oriented programming for building robust applications.
-                    </div>
-                </div>
-                <!-- Skill Card 4: C -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border-2 border-gray-700 w-full sm:w-80 transition-transform transform hover:scale-105">
-                    <div class="flex items-center justify-center mb-4">
-                        <i class="fas fa-file-code text-4xl text-gray-400"></i>
-                    </div>
-                    <div class="text-xl font-bold text-gray-100 mb-2">C</div>
-                    <div class="text-gray-400">
-                        Solid understanding of core programming concepts and low-level system interactions.
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Social Links -->
-            <div id="contact" class="mt-20">
-                <h3 class="text-2xl font-semibold text-pink-500 mb-4">Let's connect!</h3>
-                <div class="flex justify-center space-x-6">
-                    <a href="https://www.instagram.com/lucky_str_45" target="_blank" class="text-gray-400 hover:text-pink-500 transition-colors duration-300">
-                        <i class="fab fa-instagram text-3xl"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/lalit-suthar-445646334" target="_blank" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
-                        <i class="fab fa-linkedin text-3xl"></i>
-                    </a>
-                    <a href="mailto:sutharlalit791@example.com" class="text-gray-400 hover:text-red-500 transition-colors duration-300">
-                        <i class="fas fa-envelope text-3xl"></i>
-                    </a>
-                    <a href="https://github.com/lalitsuthar45"  class="text-gray-400 hover:text-white transition-colors duration-300">
-                        <i class="fab fa-github text-3xl"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Skills -->
+    <section id="skills">
+      <h2>My Skills</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <i class="fab fa-html5 icon html"></i>
+          <div class="title">HTML5</div>
+          <p>Strong foundation in building structured and semantic web pages.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-css3-alt icon css"></i>
+          <div class="title">CSS3 & Tailwind CSS</div>
+          <p>Proficient in styling and creating modern, responsive designs.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-terminal icon cpp"></i>
+          <div class="title">C++</div>
+          <p>Experience with object-oriented programming for robust applications.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-file-code icon c"></i>
+          <div class="title">C</div>
+          <p>Solid understanding of core programming concepts & system interactions.</p>
+        </div>
+      </div>
 
-    <!-- Typed.js -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const typed = new Typed("#element", {
-                strings: ["Web Developer", "Video Editor", "Web Designer", "App Developer"],
-                typeSpeed: 50,
-                backSpeed: 50,
-                loop: true
-            });
-        });
+      <!-- Social -->
+      <div id="contact">
+        <h3>Let's connect!</h3>
+        <div class="social">
+          <a href="https://www.instagram.com/lucky_str_45" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/lalit-suthar-445646334" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:sutharlalit791@example.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/lalitsuthar45"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  const menuBtn = document.getElementById('menu-btn');
-  const sidebar = document.getElementById('sidebar');
-  const closeBtn = document.getElementById('close-btn');
-  const overlay = document.getElementById('overlay');
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      new Typed("#element", {
+        strings: ["Web Developer", "Video Editor", "Web Designer", "App Developer"],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true
+      });
+    });
 
-  menuBtn.addEventListener('click', () => {
-    sidebar.classList.remove('-translate-x-full');
-    overlay.classList.remove('hidden');
-  });
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+    const overlay = document.getElementById('overlay');
 
-  closeBtn.addEventListener('click', () => {
-    sidebar.classList.add('-translate-x-full');
-    overlay.classList.add('hidden');
-  });
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      overlay.style.display = 'block';
+    });
 
-  overlay.addEventListener('click', () => {
-    sidebar.classList.add('-translate-x-full');
-    overlay.classList.add('hidden');
-  });
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      overlay.style.display = 'none';
+    });
 
-    </script>
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      overlay.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
