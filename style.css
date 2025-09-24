@@ -1,259 +1,227 @@
-/* ===== Reset ===== */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  background: #111827; /* gray-900 */
-  color: #e5e7eb; /* gray-200 */
   font-family: Arial, sans-serif;
+  background-color: #111827;
+  color: #e5e7eb;
   line-height: 1.6;
 }
 
-/* ===== Header ===== */
+/* Header */
 header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(3, 7, 18, 0.8);
-  backdrop-filter: blur(6px);
+  background: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(10px);
 }
-nav {
+
+header nav {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem;
+  flex-wrap: wrap;
 }
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.logo {
+
+header .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: #22d3ee;
 }
-.hamburger {
-  font-size: 1.5rem;
-  color: #9ca3af;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.hamburger:hover {
-  color: #22d3ee;
-}
-.nav-links {
+
+nav ul {
   display: flex;
-  list-style: none;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
 }
-.nav-links a {
-  color: #e5e7eb;
-  padding: 0.5rem 0.75rem;
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
-  text-decoration: none;
   transition: 0.3s;
-}
-.nav-links a:hover {
-  color: #fbbf24;
-  border: 1px solid #fbbf24;
+  color: #e5e7eb;
 }
 
-/* ===== Sidebar ===== */
-#sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 16rem;
-  height: 100%;
-  background: #111827;
-  transform: translateX(-100%);
-  transition: 0.3s;
-  z-index: 100;
-}
-#sidebar.active {
-  transform: translateX(0);
-}
-.sidebar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid #374151;
-}
-.sidebar-header h2 {
-  color: #22d3ee;
-}
-#close-btn {
-  background: none;
-  border: none;
-  color: #9ca3af;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-#close-btn:hover {
-  color: #ef4444;
-}
-#sidebar ul {
-  list-style: none;
-  padding: 1rem;
-}
-#sidebar ul li {
-  margin: 1rem 0;
-}
-#sidebar ul a {
-  color: #d1d5db;
-  text-decoration: none;
-  transition: 0.3s;
-}
-#sidebar ul a:hover {
-  color: #22d3ee;
-}
-#overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  display: none;
-  z-index: 90;
+nav ul li a:hover {
+  color: #f59e0b;
+  border: 1px solid #f59e0b;
 }
 
-/* ===== Hero ===== */
+/* Hero Section */
 #home {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   padding: 2rem;
   text-align: center;
 }
+
 #home h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: bold;
 }
-.highlight {
-  color: #e879f9;
+
+#home span {
+  color: #06b6d4;
 }
-.typing {
-  color: #22d3ee;
-}
-.hero-buttons {
-  margin-top: 2rem;
+
+#home .buttons {
+  margin-top: 1.5rem;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
 }
-.btn {
+
+#home .buttons a {
   padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  font-weight: 600;
+  border-radius: 30px;
+  font-weight: bold;
   text-decoration: none;
   transition: 0.3s;
 }
-.btn.primary {
+
+#home .btn-primary {
   background: #2563eb;
   color: white;
 }
-.btn.primary:hover {
+
+#home .btn-primary:hover {
   background: #1d4ed8;
 }
-.btn.secondary {
+
+#home .btn-outline {
   border: 2px solid #2563eb;
-  color: #3b82f6;
+  color: #2563eb;
 }
-.btn.secondary:hover {
+
+#home .btn-outline:hover {
   background: #2563eb;
   color: white;
 }
-.hero-img img {
-  max-width: 250px;
-  border-radius: 1rem;
+
+#home img {
+  max-width: 280px;
+  border-radius: 12px;
   margin-top: 2rem;
 }
 
-/* Divider */
-hr {
-  border: none;
-  border-top: 2px solid #a21caf;
-  margin: 4rem auto;
-  width: 80%;
-}
-
-/* ===== Skills ===== */
+/* Skills */
 #skills {
-  padding: 4rem 2rem;
+  padding: 3rem 1rem;
   text-align: center;
 }
+
 #skills h2 {
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: #f472b6;
 }
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+
+.skill-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
+
 .skill-card {
   background: #1f2937;
-  border: 2px solid #374151;
   padding: 1.5rem;
-  border-radius: 0.75rem;
-  width: 18rem;
+  border-radius: 12px;
+  border: 2px solid #374151;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
   transition: 0.3s;
 }
+
 .skill-card:hover {
   transform: scale(1.05);
 }
-.skill-card .icon {
+
+.skill-card i {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-.skill-card .html { color: #f97316; }
-.skill-card .css { color: #3b82f6; }
-.skill-card .cpp { color: #60a5fa; }
-.skill-card .c { color: #9ca3af; }
-.skill-card .title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+
+/* Contact */
+#contact {
+  padding: 3rem 1rem;
+  text-align: center;
 }
 
-/* ===== Contact ===== */
-#contact {
-  margin-top: 4rem;
-}
 #contact h3 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
   color: #ec4899;
+  margin-bottom: 1rem;
 }
-.social a {
-  font-size: 2rem;
-  margin: 0 0.5rem;
-  color: #9ca3af;
-  transition: 0.3s;
-}
-.social a:hover {
-  color: white;
+/* Social Icons Base Style */
+.social-icons a {
+  color: #fff;  /* default white */
+  margin: 0 10px;
+  font-size: 28px;
+  transition: color 0.3s ease;
 }
 
-/* ===== Responsive ===== */
+/* Hover Colors (official theme colors) */
+.social-icons a:hover {
+  transform: scale(1.2); /* thoda zoom effect */
+}
+
+.social-icons a.instagram:hover {
+  color: #E4405F; /* Instagram pink-red */
+}
+
+.social-icons a.linkedin:hover {
+  color: #0077B5; /* LinkedIn blue */
+}
+
+.social-icons a.github:hover {
+  color: #333; /* GitHub black */
+}
+
+.social-icons a.mail:hover {
+   color: #D44638; /* gmail */
+}
+
+.social-icons a.facebook:hover {
+  color: #1877F2; /* Facebook blue */
+}
+
+
+/* Responsive */
 @media (min-width: 768px) {
   #home {
     flex-direction: row;
     text-align: left;
   }
-  .hero-text, .hero-img {
+  #home .hero-text {
     flex: 1;
   }
-  .hero-img {
+  #home .hero-img {
+    flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+  }
+  #home h1 {
+    font-size: 3rem;
+  }
+  #home img {
+    margin-top: 0;
+    max-width: 350px;
   }
 }
