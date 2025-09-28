@@ -3,56 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lalit Suthar - Contact-page</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Font -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <title>Contact Me - Lalit Suthar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-900 text-gray-200 min-h-screen">
-
-    <!-- Header & Navigation -->
-    <header class="sticky top-0 z-50 bg-gray-950/80 backdrop-blur-sm">
-        <nav class="container mx-auto flex flex-col sm:flex-row items-center justify-between p-4 md:px-8 lg:px-16">
-            <div class="text-2xl font-bold text-cyan-400 mb-4 sm:mb-0">
-                Lalit's Portfolio
-            </div>
-            <ul class="flex flex-wrap items-center justify-center space-x-2 sm:space-x-4">
-                <li><a href="index.html" class="px-3 py-1 border border-transparent rounded-lg hover:border-amber-400 hover:text-amber-400 transition-colors duration-300">home</a></li>
-                <li><a href="about.html" class="px-3 py-1 border border-transparent rounded-lg hover:border-amber-400 hover:text-amber-400 transition-colors duration-300">about me</a></li>
-                <li><a href="project.html" class="px-3 py-1 border border-transparent rounded-lg hover:border-amber-400 hover:text-amber-400 transition-colors duration-300">project</a></li>
-                <li><a href="contact.html" class="px-3 py-1 border border-transparent rounded-lg hover:border-amber-400 hover:text-amber-400 transition-colors duration-300">contact us</a></li>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Lalit's Portfolio</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
-    <main class="flex items-center justify-center py-16">
-        <div class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-lg border-2 border-gray-700 max-w-lg w-full text-center">
-            <h1 class="text-3xl font-bold mb-8 text-fuchsia-400">contact us</h1>
-            <form id="contactForm" class="space-y-6">
-                <div class="text-left">
-                    <label for="name" class="block text-lg font-medium text-gray-300">name</label>
-                    <input type="text" id="name" name="name" required class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-2 px-4 focus:ring-fuchsia-400 focus:border-fuchsia-400 text-white placeholder-gray-400">
-                </div>
-                <div class="text-left">
-                    <label for="email" class="block text-lg font-medium text-gray-300">email</label>
-                    <input type="email" id="email" name="email" required class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-2 px-4 focus:ring-fuchsia-400 focus:border-fuchsia-400 text-white placeholder-gray-400">
-                </div>
-                <div class="text-left">
-                    <label for="message" class="block text-lg font-medium text-gray-300">message</label>
-                    <textarea id="message" name="message" rows="5" required class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-2 px-4 focus:ring-fuchsia-400 focus:border-fuchsia-400 text-white placeholder-gray-400"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-400">
-                    send
-                </button>
-                <p id="confirmation" class="mt-4 text-green-500 font-semibold" style="display: none;">Message sent successfully!</p>
+
+    <main>
+        <div class="contact-card">
+            <h1>Contact Me</h1>
+            <form id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+                <button type="submit" class="btn-submit">Send Message</button>
+
+                <p id="confirmation">Message sent successfully!</p>
             </form>
         </div>
     </main>
@@ -62,11 +44,10 @@
         const confirmation = document.getElementById("confirmation");
 
         form.addEventListener("submit", function(event) {
-            event.preventDefault(); // prevents page reload
+            event.preventDefault();
             confirmation.style.display = "block";
             form.reset();
         });
     </script>
 </body>
 </html>
-
