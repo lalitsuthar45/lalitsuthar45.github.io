@@ -4,8 +4,365 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lalit Suthar - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    /* ================================================
+    INLINE STYLESHEET (formerly style.css)
+    ================================================
+    */
+    :root {
+        /* Color Palette */
+        --color-bg-main: #1a202c;
+        --color-bg-card: #2d3748;
+        --color-text-light: #f7fafc;
+        --color-accent-primary: #5b21b6; /* Purple/Indigo */
+        --color-accent-secondary: #38bdf8; /* Cyan/Sky Blue */
+        --color-highlight: #f97316; /* Orange for highlight text */
+    }
+
+    /* Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif; /* Using a modern default font */
+        background-color: var(--color-bg-main);
+        color: var(--color-text-light);
+        line-height: 1.6;
+        scroll-behavior: smooth;
+    }
+
+    section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 40px;
+        color: var(--color-accent-secondary);
+    }
+
+    /* --- Header & Navigation --- */
+    header {
+        background-color: rgba(26, 32, 44, 0.95);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--color-accent-secondary);
+    }
+
+    nav ul {
+        list-style: none;
+        display: none; /* Hidden by default for mobile */
+        gap: 20px;
+    }
+
+    nav ul a {
+        color: var(--color-text-light);
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Nav Menu Hover Effect (Visible Box) */
+    nav ul a:hover {
+        color: var(--color-accent-secondary);
+        background-color: rgba(56, 189, 248, 0.1);
+        box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    }
+
+
+    /* --- Hero Section --- */
+    #home {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column; /* Stacked on mobile */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        max-width: 600px;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    #home span {
+        color: var(--color-accent-primary);
+    }
+
+    .hero-text .highlight {
+        color: var(--color-highlight);
+        font-size: 1.75rem;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .hero-img img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid var(--color-accent-secondary);
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    /* Profile Image Hover Effect */
+    .hero-img img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(56, 189, 248, 0.8);
+    }
+
+    .buttons {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .btn-primary, .btn-outline, .btn-secondary {
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .btn-primary {
+        background-color: var(--color-accent-primary);
+        color: var(--color-text-light);
+        border: 2px solid var(--color-accent-primary);
+    }
+
+    .btn-primary:hover {
+        background-color: transparent;
+        border-color: var(--color-accent-primary);
+        color: var(--color-accent-primary);
+    }
+
+    .btn-outline {
+        background-color: transparent;
+        color: var(--color-accent-secondary);
+        border: 2px solid var(--color-accent-secondary);
+    }
+
+    .btn-outline:hover {
+        background-color: var(--color-accent-secondary);
+        color: var(--color-bg-main);
+    }
+
+    .btn-secondary {
+        background-color: rgb(239, 49, 109);
+        color: #082a37;
+        border: 2px solid rgb(239, 49, 109);
+        display: inline-block;
+        margin-top: 15px;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+    }
+
+    .btn-secondary:hover {
+        background-color: transparent;
+        color: rgb(239, 49, 109);
+    }
+
+    /* --- About Section --- */
+    #about {
+        background-color: var(--color-bg-card); /* Brighter background for contrast */
+    }
+
+    .about-content {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #374151; /* Brighter inner card background */
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-content:hover {
+        transform: translateY(-5px); /* Subtle hover lift */
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .about-content p {
+        font-size: 1.1rem;
+        text-align: center;
+        color: var(--color-text-light); /* Clear text color */
+    }
+
+
+    /* --- Skills & Projects Containers (Shared Grid Layout) --- */
+    .skill-container, .project-container {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+
+    .skill-card, .project-card {
+        background-color: var(--color-bg-card);
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Card Hover Effect */
+    .skill-card:hover, .project-card.card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .skill-card i {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .skill-card h3 {
+        color: var(--color-accent-secondary);
+    }
+
+
+#projects h2{
+      color: #ee1585;
+}
+    .project-card h3 {
+         color: #f61c8c;
+        font-size: 1.3rem;
+    }
+
+    .project-card p {
+        font-size: 0.95rem;
+        margin-bottom: 0;
+    }
+
+
+    /* --- Contact Section & Social Icons --- */
+    #contact {
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #contact h3 {
+        color: var(--color-accent-primary);
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+        font-size: 2rem;
+        text-decoration: none;
+        color: var(--color-text-light);
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Social Icon Theme Color Hover Effects */
+    .social-icons a:hover {
+        transform: translateY(-5px); /* Lift effect on hover */
+    }
+
+    .social-icons .instagram:hover { color: #E1306C; }
+    .social-icons .linkedin:hover { color: #0A66C2; }
+    .social-icons .github:hover { color: #ffffff; }
+    .social-icons .mail:hover { color: #d93025; }
+    .social-icons .facebook:hover { color: #1877F2; }
+
+
+    /* --- Footer --- */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: var(--color-bg-card);
+        font-size: 0.9rem;
+        color: rgba(247, 250, 252, 0.6);
+    }
+
+
+    /* --- Responsiveness (Mobile First) --- */
+
+    /* Tablet and Desktop Styles */
+    @media (min-width: 768px) {
+        nav ul {
+            display: flex; /* Show navigation links */
+        }
+
+        #home {
+            flex-direction: row; /* Side-by-side layout for desktop */
+            text-align: left;
+            padding-top: 100px;
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
+        #home h1 {
+            font-size: 3.5rem;
+        }
+
+        .hero-text .highlight {
+            display: inline;
+            font-size: 2.25rem;
+        }
+
+        .buttons {
+            justify-content: flex-start;
+        }
+    }
+    
+#contact h3{
+  color: #e91f87;
+}
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -16,7 +373,8 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#projects">Projects</a></li> <!-- New Nav Link -->
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -31,8 +389,17 @@
       </div>
     </div>
     <div class="hero-img">
+      <!-- Placeholder image: Replace 'myimage.jpg' with your actual image path/URL -->
       <img src="myimage.jpg" alt="Profile Picture">
     </div>
+  </section>
+
+  <!-- About Section (Added a placeholder since it was missing in your last file) -->
+  <section id="about" class="centered-content">
+      <h2>About Me</h2>
+      <div class="about-content">
+          <p>I am Lalit Suthar, a passionate Software Engineer currently pursuing my studies at Mohan Lal Sukhadia University (MLSU). I have hands-on experience with C++, C, HTML, and CSS. Hailing from the beautiful town of Adawada in Jalore, Rajasthan, I am eager to learn, grow, and create innovative solutions in the world of technology.</p>
+      </div>
   </section>
 
   <!-- Skills Section -->
@@ -62,17 +429,79 @@
     </div>
   </section>
 
+  <!-- Projects Section (New Content) -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-container">
+      <div class="project-card card-hover">
+        <h3>my calculater </h3>
+        <p>My first step into coding world  A simple yet smart Calculator project!.From logic to design  presenting my Calculator project.Turning code into calculations! 💻➕➖✖️➗.A small project, a big learning my Calculator app is ready!.Code × Creativity = My Calculator Project</p>
+        <a href=" https://lalitsuthar45.github.io/mycalculater/" class="btn-secondary">View Project</a>
+      </div>
+      <div class="project-card card-hover">
+        <h3>Jio hotstar login page</h3>
+        <p>Redesigned the Jio Hotstar login page with code + creativity! 
+Entertainment meets coding – my Jio Hotstar login page project is here!.
+From movies to matches, login now with my custom Jio Hotstar page.
+UI × UX × Coding = My Jio Hotstar Login Page project.
+Streaming ideas into reality – presenting Jio Hotstar login page.</p>
+        <a href=" https://lalitsuthar45.github.io/jiohotstar/" class="btn-secondary">View project</a>
+      </div>
+      <div class="project-card card-hover">
+        <h3>LalitSutharOfficial</h3>
+        <p>"Every line of code tells a story of learning, creativity, and innovation 🚀. With my GitHub profile ‘lalitsutharoFFIcia’, I’m not just uploading projects, I’m documenting my journey as a developer 💻✨. From small experiments to big ideas, each repository reflects consistency, growth, and passion for technology 🔥. This is more than just a collection of files – it’s a roadmap of skills, challenges, and achievements that shape me into a better coder every single day 🌟."</p>
+        <a href=" https://lalitsuthar45.github.io/LalitSutharOfficial/" class="btn-secondary">View Details</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section id="contact">
     <h3>Let's connect!</h3>
     <div class="social-icons">
-  <a href="https://instagram.com/lalit_suthar_45" class="instagram"><i class="fab fa-instagram"></i></a>
-  <a href="https://linkedin.com/in/lalit-suthar-445646334" class="linkedin"><i class="fab fa-linkedin"></i></a>
-  <a href="https://github.com/lalitsuthar45" class="github"><i class="fab fa-github"></i></a>
-  <a href="mailto:sutharlalit791@gmail.com" class="mail"><i class="fas fa-envelope"></i></a>
-  <a href="https://facebook.com/" class="facebook"><i class="fab fa-facebook"></i></a>
-</div>
-
+      <a href="https://instagram.com/lalit_suthar_45" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/lalit-suthar-445646334" class="linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/lalitsuthar45" class="github" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:sutharlalit791@gmail.com" class="mail"><i class="fas fa-envelope"></i></a>
+      <a href="https://facebook.com/" class="facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
   </section>
+
+  <footer>
+    <p>&copy; 2024 Lalit Suthar. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
