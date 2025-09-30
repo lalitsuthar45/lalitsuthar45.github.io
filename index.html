@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,6 +37,9 @@
         line-height: 1.6;
         scroll-behavior: smooth;
     }
+
+
+    
 
     section {
         padding: 60px 20px;
@@ -127,7 +131,7 @@
 
     .hero-text .highlight {
         color: var(--color-highlight);
-        font-size: 1.75rem;
+         font-size: 2.5rem;
         display: block;
         margin-top: 10px;
     }
@@ -362,6 +366,17 @@
 #contact h3{
   color: #e91f87;
 }
+
+ .typed-cursor {
+      font-size: 2.5rem;
+      color: cyan;
+    }
+#typing {
+  font-size: 2.5rem;   /* yaha aap apni pasand ka size de sakte ho */
+  color: cyan;         /* optional: color bhi change kar sakte ho */
+  font-weight: bold;   /* text thoda strong lagega */
+}
+
   </style>
 </head>
 <body>
@@ -382,7 +397,8 @@
   <!-- Hero Section -->
   <section id="home">
     <div class="hero-text">
-      <h1>Hello, I am <span>Lalit Suthar</span><br>And I'm a <span class="highlight">Web Developer</span></h1>
+      <h1>Hello, I am <span>Lalit Suthar</span><br>And I'm a <span class="highlight"></span></h1>
+       <span id="typing"></span>
       <div class="buttons">
         <a href="meraresume.pdf" class="btn-primary">Download Resume</a>
         <a href="contact.html" class="btn-outline">Contact Me</a>
@@ -466,6 +482,17 @@ Streaming ideas into reality – presenting Jio Hotstar login page.</p>
       <a href="https://facebook.com/" class="facebook" target="_blank"><i class="fab fa-facebook"></i></a>
     </div>
   </section>
+
+ <!-- Typed.js CDN -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed("#typing", {
+      strings: ["Web Developer", "Video Designer","Graphic Designer", "App Devloper"],
+      typeSpeed: 70,
+      backSpeed: 70,
+      loop: true
+    });
+  </script>
 
   <footer>
     <p>&copy; 2024 Lalit Suthar. All rights reserved.</p>
