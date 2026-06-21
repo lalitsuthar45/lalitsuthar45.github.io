@@ -223,6 +223,7 @@
       font-size: 2.1rem;
       line-height: 1.25;
       font-weight: 700;
+      
     }
 
     #home h1 .name  { color: var(--accent); }
@@ -237,8 +238,13 @@
       object-fit: cover;
       border: 2px solid rgba(77,67,100,.8);
       transition: transform .3s ease;
+      transform: translateY(-5px);
+      box-shadow: 0 0 14px rgba(56,189,248,.45);
     }
-    .hero-img img:hover { transform: scale(1.05); }
+    .hero-img img:hover { transform: scale(1.05); 
+    
+    
+    }
 
     .buttons {
       margin-top: 28px;
@@ -246,6 +252,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 16px;
+      
     }
 
     .btn-primary {
@@ -257,7 +264,12 @@
       color: var(--text-light);
       border: 2px solid var(--accent);
       transition: all .3s;
+      
+      transform: translateY(-5px);
+      box-shadow: 0 0 14px rgba(56,189,248,.45);
+      
     }
+    
     .btn-primary:hover { background: transparent; color: var(--accent); }
 
     .btn-outline {
@@ -269,8 +281,13 @@
       color: var(--cyan);
       border: 2px solid var(--cyan);
       transition: all .3s;
+      transform: translateY(-5px);
+      box-shadow: 0 0 14px rgba(56,189,248,.45);
+      
     }
-    .btn-outline:hover { background: var(--cyan); color: var(--bg-main); }
+    .btn-outline:hover { background: var(--cyan); color: var(--bg-main);
+    
+    }
 
     .btn-secondary {
       display: inline-block;
@@ -284,6 +301,7 @@
       color: #082a37;
       border: 2px solid rgb(239,49,109);
       transition: all .3s;
+      
     }
     .btn-secondary:hover { background: transparent; color: rgb(239,49,109); }
 
@@ -477,6 +495,21 @@ body {
 }
 
 
+
+.skill-card,
+.project-card,
+.about-box {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease;
+}
+
+.skill-card.show,
+.project-card.show,
+.about-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
   </style>
   
@@ -714,6 +747,26 @@ function animate() {
 animate();
 
 window.addEventListener("resize", resize);
+
+
+/* Scroll Reveal Animation */
+const reveals = document.querySelectorAll(
+  ".skill-card, .project-card, .about-box"
+);
+
+function revealOnScroll() {
+  reveals.forEach((el) => {
+    const top = el.getBoundingClientRect().top;
+    const trigger = window.innerHeight - 100;
+
+    if (top < trigger) {
+      el.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
   </script>
 
 </body>
